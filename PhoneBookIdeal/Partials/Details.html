@@ -1,0 +1,25 @@
+﻿<section>
+    <div ng-model="phoneRecord">
+        <dl class="dl-horizontal">
+            <dt>First Name: </dt>
+            <dd>{{phoneRecord.FirstName}}</dd>
+        </dl>
+
+        <dl class="dl-horizontal">
+            <dt>Last Name: </dt>
+            <dd>{{phoneRecord.LastName}}</dd>
+        </dl>
+
+        <dl class="dl-horizontal">
+            <dt>Phone Number: </dt>
+            <dd>{{phoneRecord.PhoneNumber}}</dd>
+        </dl>
+
+        <dl class="dl-horizontal">
+            <dd>
+                <a href="#/Edit/{{phoneRecord.ID}}" class="btn btn-primary btn-sm">Edit</a>
+                <a href="index" class="btn btn-default btn-sm">Back</a>
+            </dd>
+        </dl>
+    </div>
+</section>

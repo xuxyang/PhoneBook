@@ -1,0 +1,31 @@
+﻿<section>
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="firstNameInput" class="col-md-2 control-label">First Name: </label>
+            <div class="col-md-10">
+                <input type="text" ng-model="firstName" id="firstNameInput" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="lastNameInput" class="col-md-2 control-label">Last Name: </label>
+            <div class="col-md-10">
+                <input type="text" ng-model="lastName" id="lastNameInput" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="phoneNumberInput" class="col-md-2 control-label">Phone Number: </label>
+            <div class="col-md-10">
+                <input type="text" ng-model="phoneNumber" id="phoneNumberInput" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button ng-click="savePhone()" type="submit" class="btn btn-primary">Save</button>
+                <a href="index" class="btn btn-default">Back</a>
+            </div>
+        </div>
+    </form>
+</section>

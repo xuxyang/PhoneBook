@@ -1,0 +1,1 @@
+Supports CRUD operations for people's phone numbers. It's an ASP.NET Web API project which uses Entity Framework in the backend and AngularJS and Bootstrap in the frontend and uses Moq as unit test framework

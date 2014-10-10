@@ -1,0 +1,45 @@
+﻿<section>
+    
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label for="searchInput" class="col-md-1 control-label">Search Name:</label>
+            <div class="col-md-11">
+                <input ng-model="query" placeholder="Search for person" id="searchInput" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="orderInput" class="col-md-1 control-label">Order by:</label>
+            <div class="col-md-11">
+                <select ng-model="recordOrder" id="orderInput" class="form-control">
+                    <option value="FirstName">First name</option>
+                    <option value="PhoneNumber">Phone number</option>
+                </select>
+                <label>
+                    <input type="radio" ng-model="direction" name="direction" checked />Ascending
+                </label>
+                <label>
+                    <input type="radio" ng-model="direction" name="direction" value="reverse" />Decending
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="panel-body">
+            <ul class="list-group">
+                <li ng-repeat="item in phoneRecords | filter:query | orderBy: recordOrder:direction" class="list-group-item">
+                    <a href="#/Details/{{item.ID}}">
+                        <h3>{{item.FirstName + " " + item.LastName}}</h3>
+                        <h4>{{item.PhoneNumber}}</h4>
+                    </a>
+                    <button ng-click="deletePhone(item.ID)" class="btn btn-default btn-sm">Delete Phone</button>
+                </li>
+            </ul>
+
+            <div>
+                <a href="#/Add" class="btn btn-primary">Add Phone</a>
+            </div>
+        </div>
+    </div>
+</section>
