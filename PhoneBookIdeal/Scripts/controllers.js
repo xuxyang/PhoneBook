@@ -32,6 +32,7 @@ phonebookControllers.controller("AddController", ["$scope", "$http", function ($
 phonebookControllers.controller("EditController", ["$scope", "$http", "$routeParams", function ($scope, $http, $routeParams) {
     var phoneID = $routeParams.itemId;
     $http.get("/api/Phone/" + phoneID).success(function (data) {
+        $scope.phoneID = phoneID;
         $scope.firstName = data.FirstName;
         $scope.lastName = data.LastName;
         $scope.phoneNumber = data.PhoneNumber;

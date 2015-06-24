@@ -17,11 +17,6 @@ namespace PhoneBookIdeal.Controllers
     {
         private IPhoneService service;
 
-        public PhoneController()
-        {
-            service = new PhoneService(new PhoneDBContext());
-        }
-
         public PhoneController(IPhoneService phoneService)
         {
             service = phoneService;
